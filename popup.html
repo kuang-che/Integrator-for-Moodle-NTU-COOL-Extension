@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <title>Moodle 設定</title>
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; width: 350px; padding: 15px; background-color: #f5f5f5; margin: 0; }
+        .section-title { font-size: 14px; margin: 0 0 10px 0; color: #333; font-weight: bold; }
+        .header-card { background: white; padding: 15px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); margin-bottom: 15px; text-align: center; }
+        .moodle-btn { display: inline-block; background: #0076B8; color: white; padding: 10px 15px; text-decoration: none; border-radius: 5px; font-weight: bold; margin-top: 10px; width: 85%; transition: background-color 0.3s; }
+        .moodle-btn:hover { background: #005A8C; }
+        .course-card { background: white; padding: 12px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); margin-bottom: 10px; }
+        .course-title { font-size: 14px; font-weight: bold; color: #333; margin-top: 0; margin-bottom: 10px; padding-bottom: 8px; border-bottom: 1px solid #eee; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+        .input-group { margin-bottom: 8px; }
+        .input-group label { display: block; font-size: 12px; color: #666; margin-bottom: 3px; }
+        .input-group input[type="text"] { width: 93%; padding: 6px; border: 1px solid #ccc; border-radius: 4px; font-size: 12px; }
+        
+        .color-group { display: flex; align-items: center; justify-content: space-between; margin-top: 12px; padding-top: 10px; border-top: 1px dashed #ccc; padding-bottom: 10px; }
+        .color-group label { font-size: 13px; color: #333; font-weight: bold; margin: 0; }
+        .color-group input[type="color"] { cursor: pointer; border: none; padding: 0; width: 32px; height: 32px; border-radius: 4px; background: none; }
+        
+        .visibility-group { display: flex; align-items: center; justify-content: space-between; border-top: 1px dashed #ccc; padding-top: 10px; margin-top: 2px; }
+        .visibility-group label { font-size: 13px; color: #333; font-weight: bold; margin: 0; cursor: pointer; }
+        .visibility-group input[type="checkbox"] { cursor: pointer; transform: scale(1.2); margin: 0; }
+        
+        .save-btn { background: #28a745; color: white; border: none; padding: 10px; width: 100%; border-radius: 5px; font-weight: bold; cursor: pointer; margin-top: 10px; transition: background-color 0.3s; }
+        .save-btn:hover { background: #218838; }
+
+        /* GitHub 按鈕樣式 */
+        .github-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: #24292e;
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 12px;
+            font-weight: bold;
+            margin-top: 15px;
+            width: 100%;
+            transition: background-color 0.3s;
+        }
+        .github-btn:hover { background: #1b1f23; }
+        .github-btn svg { margin-right: 8px; fill: currentColor; }
+        .footer { text-align: center; margin-top: 5px; }
+    </style>
+</head>
+<body>
+    <h3 class="section-title">1. 獲取課程資訊</h3>
+    <div class="header-card">
+        <p style="font-size: 12px; color: #666; margin: 0;">首次使用或更新台科大課程，請先前往 Moodle 讓系統自動獲取您的課程資料。</p>
+		<button id="go-moodle-btn" class="moodle-btn" style="border:none; cursor:pointer;">前往 Moodle 我的課程</button>
+    </div>
+
+    <div id="course-list">
+    </div>
+
+    <button id="save-btn" class="save-btn">儲存設定</button>
+
+    <div class="footer">
+		<button id="go-github-btn" class="github-btn" style="border:none; cursor:pointer;">
+			<svg height="16" width="16" viewBox="0 0 16 16" aria-hidden="true">
+                <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path>
+            </svg>
+            前往 GitHub 專案
+		</button>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+</html>

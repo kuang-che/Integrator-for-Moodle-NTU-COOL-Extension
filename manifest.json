@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "Integrator for Moodle & NTU COOL",
+  "version": "1.1",
+  "description": "將台科大 Moodle 課程整併至NTU COOL 頁面，支援自訂連結",
+  "permissions": [
+    "storage"
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://moodle2.ntust.edu.tw/my/courses.php*"],
+      "js": ["moodle.js"]
+    },
+    {
+      "matches": ["https://cool.ntu.edu.tw/*"],
+      "js": ["cool.js"]
+    }
+  ]
+}
