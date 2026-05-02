@@ -9,10 +9,8 @@
 - **隱私安全**：所有資料均儲存在本地瀏覽器，不會上傳至任何伺服器。
 
 ## 安裝說明
-1. 下載本專案原始碼並解壓，確保`manifest.json` 在資料夾的一級目錄中。
-2. 開啟 Chrome 瀏覽器，進入 `chrome://extensions/`。
-3. 開啟右上角的「開發者模式」。
-4. 點擊「載入擴充功能」，並選擇包含 `manifest.json` 的資料夾。
+請至以下網址安裝擴充插件：
+https://chromewebstore.google.com/detail/bclmcjimbdpgbjbfflffapefefkledag?utm_source=item-share-cb
 
 ## 使用方法
 1. **獲取課程**：點選擴充功能設定中的按鈕前往 [NTUST Moodle 我的課程](https://moodle2.ntust.edu.tw/my/courses.php)，擴充功能會自動抓取您的課程列表。
